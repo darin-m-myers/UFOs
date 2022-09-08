@@ -15,43 +15,45 @@
 </head>
 <body>
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">UFO Sightings</a>
-        </nav>
-        <div class="jumbotron">
-            <h1>The Truth Is Out There</h1>
+        <div class="container-bg bg-dark">
+            <nav class="navbar navbar-dark navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">🛸 UFO SIGHTINGS</a>
+            </nav>
+            <div class="jumbotron bg-transparent rounded-0 mb-0">
+                <h1 class="display-4">The Truth is Out There</h1>
+            </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid bg-dark">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-12 col-sm-18 mt-4">
                     <h3>UFO Sightings: Fact or Fancy? <br><small>Ufologists Weigh In</small></h3>
                 </div>
-                <div class="col-md-8">
+                <div class="col-lg-9 mt-4">
                     <P>
                         Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.<br><br>"The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"<br><br>Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.<br><br>So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see.
                     </P>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid bg-dark">
             <div class="row">
               <div class="col-md-3">
-                <form>
-                    <p>Filter Search</p>
-                    <ul class="list-group">
-                        <li class="list-group-item">
+                <form class="list-group bg-dark mt-3">
+                    <h4>Filter Table Search</h4>
+                    <ul class="list-group bg-dark">
+                        <li class="list-group-item bg-dark">
                             <label for="date">Enter Date</label>
                             <input type="text" placeholder="1/10/2010" id="datetime" />
                         </li>
-                        <li class="list-group-item">
-                            <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                        <li class="list-group-item bg-dark">
+                            <button id="filter-btn" type="button" class="btn btn-dark border border-white">Filter Table</button>
                         </li>
                     </ul>
                 </form>
               </div>
               <div class="col-md-9">
-                <table class="table table-striped">
-                  <thead>
+                <table class="table table-responsive table-dark table-striped table-hover mt-3">
+                  <thead class="thead-dark">
                     <tr>
                         <th>Date</th>
                         <th>City</th>
@@ -67,7 +69,16 @@
               </div>
             </div>
         </div>
-
+        <footer class="footer">
+            <div class="container text-center">
+                <span class="text-muted">
+                    Created by Darin Myers for KU Data Analytics Bootcamp 2022
+                </span>
+            </div>
+        </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+    color: #f7f7f7;
+    background-color: black;
+    margin-bottom: 60px;
+}
+
+.container-bg {
+    background-image: url("../images/earth.jpg");
+    background-size: 100% 100%;
+}
+
+.jumbotron {
+    text-align: center;
+
+}
+
+.form {
+    border-style: solid;
+    border-color: white;
+}
+
+h1 {
+    text-shadow: 2px 2px 2px black;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: black;
+}

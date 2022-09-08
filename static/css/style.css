@@ -16,7 +16,6 @@ body {
 
 .jumbotron {
     text-align: center;
-
 }
 
 .form {
@@ -26,6 +25,11 @@ body {
 
 h1 {
     text-shadow: 2px 2px 2px black;
+}
+
+.display-4 {
+    font-size: 80px;
+    font-weight: 400;
 }
 
 .footer {

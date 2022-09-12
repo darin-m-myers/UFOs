@@ -1,16 +1,25 @@
-# UFO Sightings
+# :alien: UFO Sightings :alien:
 JavaScript, Bootstrap, and UFOs
 
 ## Overview
 The purpose of this analysis is to build a responsive website that contains a table of all of the UFO sitings for users to filter and analyze.
 
 ## Results
-Step by Step Instructions to Filter UFO Sightings Data
-1. Load the Site
-2. Scroll down to the filter section
-3. Choose an option from any or all of the drop-down lists
-4. The table will update automatically
-5. (Optionally) Click "Download results as CSV" to download the filtered data into CSV format.
+| Step by Step Instructions to Filter UFO Sightings Data |
+| ----------------------|
+| 1. Navigate to the Site|
+|   |
+| 2. Scroll down to the filter section|
+| <img src="https://user-images.githubusercontent.com/107961905/189763720-2315687d-6683-4529-842d-2974654f7150.png" width="400"> |
+|   |
+| 3. Choose an option from any or all of the drop-down lists |
+| <img src="https://user-images.githubusercontent.com/107961905/189762116-ff1b5b28-77d5-492f-aa76-c2fb4cc03e16.png" width="400"> |
+|   |
+| 4. The table will update automatically
+| <img src="https://user-images.githubusercontent.com/107961905/189764394-59ef81ec-59c6-4b50-a176-b7122e8c8fd1.png" width="400"> |
+|   |
+| 5. (Optionally) Click "Download results as CSV" to download the filtered data.
+| <img src="https://user-images.githubusercontent.com/107961905/189761959-7b5202ce-711a-4b03-afc2-c8a594449896.png" width="200"> |
 
 ## Analysis
 ### Drawbacks of this design
@@ -22,5 +31,9 @@ Step by Step Instructions to Filter UFO Sightings Data
 ### Recommendations for Improvement
 1. (Implemented) Switch to drop down lists instead of text input
 2. (Implemented) Improve readability in the table data by formatting the text to the proper case
-3. Add a form control to search the comments with partial text
-4. Clean and standardize the Duration column
+3. (Implemented) Add a count of filtered results
+4. Add a form control to search the comments with partial text
+5. Clean and standardize the Duration column
+
+## Website Preview
+<img src="https://user-images.githubusercontent.com/107961905/189765177-c7e44b3c-1832-4234-8cca-c4fa2c2e97bf.png" width="600">

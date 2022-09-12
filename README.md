@@ -5,6 +5,8 @@ JavaScript, Bootstrap, and UFOs
 The purpose of this analysis is to build a responsive website that contains a table of all of the UFO sitings for users to filter and analyze.
 
 ## Results
+When users land on this page, they can use the instructions below to filter the UFO Sightings Table to filter for the specific information that they need and even download the results as a CSV.
+
 | Step by Step Instructions to Filter UFO Sightings Data |
 | ----------------------|
 | 1. Navigate to the Site|

@@ -30,6 +30,8 @@ The purpose of this analysis is to build a responsive website that contains a ta
 
 ### Recommendations for Improvement
 1. (Implemented) Switch to drop down lists instead of text input
+    1.1 Load the Drop-Down list contents dynamically
+    1.2 Adjust Drop-Down list contents based on choices in other lists.
 2. (Implemented) Improve readability in the table data by formatting the text to the proper case
 3. (Implemented) Add a count of filtered results
 4. Add a form control to search the comments with partial text

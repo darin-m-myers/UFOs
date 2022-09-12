@@ -22,25 +22,87 @@ function buildTable(data) {
         }
       );
     });
+    titleUfoTable = "UFO Sightings (" + data.length + " Results)";
+    d3.select("#titleUfoTable").text(titleUfoTable);
 }
 
-function handleClick() {
-    buildTable(getFilteredData());
-};
+// Create a variable to keep track of all the filters as an object.
+var filters = {};
 
-function getFilteredData() {
-    // Grab the datetime value from the filter
-    let date = d3.select("#datetime").property("value");
-    let filteredData = tableData;
+// Use this function to update the filters. 
+function updateFilters() {
 
-    // Check to see if a date was not entered and return filtered data
-    // otherwise filter data and return
-    if (!date) return filteredData;
-    return filteredData.filter(row => row.datetime === date);
-};
+  // Save the element that was changed, the value and the Id as a variable.
+  let changedElement = d3.select(this);
+  let elementValue = changedElement.property("value");
+  let filterId = changedElement.attr("id");
+  console.log(elementValue,filterId);
 
-// Attach an event to listen for the form button
-d3.selectAll("#filter-btn").on("click", handleClick);
 
+  // If a filter value was entered then add that filterId and value
+  // to the filters list. Otherwise, clear that filter from the filters object.
+  if (elementValue){
+    filters[filterId] = elementValue;
+  } else {
+    delete filters[filterId];
+  }
+
+  // Call function to apply all filters and rebuild the table
+  filterTable();
+
+}
+
+// Use this function to filter the table when data is entered.
+function filterTable() {
+
+  // Set the filtered data to the tableData.
+  let rawData = tableData;
+
+  // Loop through all of the filters and keep any data that
+  // matches the filter values
+  filteredData= rawData.filter(i =>
+    Object.entries(filters).every(([k, v]) => i[k] === v)
+  );
+
+  console.log(filteredData);
+  
+  // Finally, rebuild the table using the filtered data
+  buildTable(filteredData);
+}
+
+// Quick and simple export target #table_id into a csv
+function download_table_as_csv(table_id, separator = ',') {
+  // Select rows from table_id
+  var rows = document.querySelectorAll('table#' + table_id + ' tr');
+  // Construct csv
+  var csv = [];
+  for (var i = 0; i < rows.length; i++) {
+      var row = [], cols = rows[i].querySelectorAll('td, th');
+      for (var j = 0; j < cols.length; j++) {
+          // Clean innertext to remove multiple spaces and jumpline (break csv)
+          var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ')
+          // Escape double-quote with double-double-quote (see https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv)
+          data = data.replace(/"/g, '""');
+          // Push escaped string
+          row.push('"' + data + '"');
+      }
+      csv.push(row.join(separator));
+  }
+  var csv_string = csv.join('\n');
+  // Download it
+  var filename = 'export_' + table_id + '_' + new Date().toLocaleDateString() + '.csv';
+  var link = document.createElement('a');
+  link.style.display = 'none';
+  link.setAttribute('target', '_blank');
+  link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv_string));
+  link.setAttribute('download', filename);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+// Attach an event to listen for changes to each filter
+d3.selectAll("select").on("change",updateFilters);
+  
 // Build the table when the page loads
 buildTable(tableData);

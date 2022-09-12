@@ -9,18 +9,16 @@ When users land on this page, they can use the instructions below to filter the 
 
 | Step by Step Instructions to Filter UFO Sightings Data |
 | ----------------------|
-| 1. Navigate to the Site|
-|   |
-| 2. Scroll down to the filter section|
+| 1. Scroll down to the filter section|
 | <img src="https://user-images.githubusercontent.com/107961905/189763720-2315687d-6683-4529-842d-2974654f7150.png" width="400"> |
 |   |
-| 3. Choose an option from any or all of the drop-down lists |
+| 2. Choose an option from any or all of the drop-down lists |
 | <img src="https://user-images.githubusercontent.com/107961905/189762116-ff1b5b28-77d5-492f-aa76-c2fb4cc03e16.png" width="400"> |
 |   |
-| 4. The table will update automatically
+| 3. The table will update automatically
 | <img src="https://user-images.githubusercontent.com/107961905/189764394-59ef81ec-59c6-4b50-a176-b7122e8c8fd1.png" width="400"> |
 |   |
-| 5. (Optionally) Click "Download results as CSV" to download the filtered data.
+| 4. (Optionally) Click "Download results as CSV" to download the filtered data.
 | <img src="https://user-images.githubusercontent.com/107961905/189761959-7b5202ce-711a-4b03-afc2-c8a594449896.png" width="200"> |
 
 ## Analysis
